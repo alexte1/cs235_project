@@ -40,7 +40,7 @@ def laplacesmoothing(traindata):
 				dictlist[x][data[x][0]] = 0
 				count[x]+=1
 	return count
-laplacesmoothing(traindataset)
+ 
 def probabilityForGood(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)):
