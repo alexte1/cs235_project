@@ -9,7 +9,7 @@ def loadData(file):
 		data[x] = [y.split() for y in data[x]]
 	return data
 
-traindatafile = 'TrainData - Druid.csv'
+traindatafile = 'TrainData - All.csv'
 traindataset = loadData(traindatafile)
 testdatafile = 'TestData - Druid.csv'
 testdataset = loadData(testdatafile)
@@ -43,7 +43,7 @@ def laplacesmoothing(traindata):
  
 def probabilityForGood(unseparateddata, traindata, card):
 	probability = 1
-	for x in range(len(card)):
+	for x in range(len(card)-1):
 		tempfreq = 0
 		for y in traindata['1']:
 			if card[x] == y[x]:
@@ -55,7 +55,7 @@ def probabilityForGood(unseparateddata, traindata, card):
 
 def probabilityForBad(unseparateddata, traindata, card):
 	probability = 1
-	for x in range(len(card)):
+	for x in range(len(card)-1):
 		tempfreq = 0
 		for y in traindata['0']:
 			if card[x] == y[x]:
@@ -66,14 +66,25 @@ def probabilityForBad(unseparateddata, traindata, card):
 
 
 def classify(unseparated, traindata, testdata):
+	correct = 0
+	ratingval = 0
 	for x in testdata:
 		print(x)
 		good = probabilityForGood(unseparated, traindata, x)
 		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
 			print("good")
+			print(x[7][0])
+			ratingval = 1
+			if (int(x[7][0])==ratingval):
+				correct+=1
 		if bad > good:
 			print("bad")
+			print(x[7][0])
+			ratingval = 0
+			if (int(x[7][0])==ratingval):
+				correct+=1
+	print(float(correct)/54)
 	return
 
 classify(traindataset, separated, testdataset)
