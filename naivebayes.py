@@ -31,39 +31,49 @@ separated = classSeparation(traindataset)
 
 #IMPLEMENT LAPLACE SMOOTHING TO ACCOUNT FOR DIVIDING BY O
 
-def probabilityForGood(traindata, card):
+def laplacesmoothing(traindata):
+	dictlist = [dict() for x in range(7)]
+	count = [0,0,0,0,0,0,0]
+	for data in traindata:
+		for x in range(len(data)-1):
+			if data[x][0] not in dictlist[x]:
+				dictlist[x][data[x][0]] = 0
+				count[x]+=1
+	return count
+laplacesmoothing(traindataset)
+def probabilityForGood(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)):
 		tempfreq = 0
 		for y in traindata['1']:
 			if card[x] == y[x]:
 				tempfreq+=1
-		probability *= float(tempfreq)/len(traindata['1'])
+		probability *= float(tempfreq+1)/(len(traindata['1'])+laplacesmoothing(unseparateddata)[x])
 	probability*= float(len(traindata['1']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
 
-def probabilityForBad(traindata, card):
+def probabilityForBad(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)):
 		tempfreq = 0
 		for y in traindata['0']:
 			if card[x] == y[x]:
 				tempfreq+=1
-		probability *= float(tempfreq)/len(traindata['0'])
+		probability *= float(tempfreq+1)/(len(traindata['0'])+laplacesmoothing(unseparateddata)[x])
 	probability*= float(len(traindata['0']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
 
-def classify(traindata, testdata):
+def classify(unseparated, traindata, testdata):
 	for x in testdata:
 		print(x)
-		good = probabilityForGood(traindata, x)
-		bad = probabilityForBad(traindata, x)
+		good = probabilityForGood(unseparated, traindata, x)
+		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
 			print("good")
 		if bad > good:
 			print("bad")
 	return
 
-classify(separated, testdataset)
+classify(traindataset, separated, testdataset)
