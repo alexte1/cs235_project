@@ -9,9 +9,9 @@ def loadData(file):
 		data[x] = [y.split() for y in data[x]]
 	return data
 
-traindatafile = 'TrainData - All.csv'
+traindatafile = 'TrainData - All - nomanacost.csv'
 traindataset = loadData(traindatafile)
-testdatafile = 'TestData - All.csv'
+testdatafile = 'TestData - All - nomanacost.csv'
 testdataset = loadData(testdatafile)
 
 
@@ -32,7 +32,7 @@ separated = classSeparation(traindataset)
 #IMPLEMENT LAPLACE SMOOTHING TO ACCOUNT FOR DIVIDING BY O
 
 def laplacesmoothing(traindata):
-	dictlist = [dict() for x in range(7)]
+	dictlist = [dict() for x in range(3)]
 	count = [0,0,0,0,0,0,0]
 	for data in traindata:
 		for x in range(len(data)-2):
@@ -74,15 +74,15 @@ def classify(unseparated, traindata, testdata):
 		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
 			print("good")
-			print(x[7][0])
+			print(x[3][0])
 			ratingval = 1
-			if (int(x[7][0])==ratingval):
+			if (int(x[3][0])==ratingval):
 				correct+=1
 		if bad > good:
 			print("bad")
-			print(x[7][0])
+			print(x[3][0])
 			ratingval = 0
-			if (int(x[7][0])==ratingval):
+			if (int(x[3][0])==ratingval):
 				correct+=1
 	print(float(correct)/135)
 	return

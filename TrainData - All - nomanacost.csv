@@ -1,0 +1,782 @@
+"11,15",0,0,Claw,0
+30,0,0,Healing Touch,0
+6,0,0,Moonfire,0
+11,0,0,Mark of the Wild,0
+11,0,0,Savage Roar,1
+6,"1, 8",0,Swipe,1
+24,0,0,Wild Growth,0
+31,0,5,Ironbark Protector,1
+17,0,0,Innervate,0
+"3,6",0,0,Starfire,1
+"3,6",0,5,Wrath,1
+11,0,5,Mark of Nature,0
+11,0,0,Soul of the Forest,0
+"11, 35",0,5,Power of the Wild,1
+"3,24",0,5,Nourish,1
+36,0,5,Druid of the Claw,1
+6,0,"5, 27",Keeper of the Grove,0
+11,0,5,Ancient of War,1
+"11, 15",0,0,Bite,0
+35,0,0,Force of Nature,1
+"11, 35",0,5,Cenarius,1
+6,0,0,Savagery,0
+6,"1, 8",5,Starfall,1
+"3, 30",0,5,Ancient of Lore,0
+"15, 27",0,5,Kun the Forgotten King,0
+35,0,"31,2",Jade Behemoth,1
+"33, 35",0,5,Jade Idol,0
+11,1,0,Mark of the Lotus,0
+24,0,0,Pilfered Power,0
+11,0,2,Celestial Dreamer,0
+"24, 35",0,0,Jade Blossom,1
+"3, 20",0,0,Lunar Visions,1
+11,0,2,Virmen Sensei,0
+36,0,5,Druid of the Scythe,1
+17,0,"2,31",Bewitched Guardian,0
+35,0,0,Wispering Woods,0
+35,7,0,Witching Hour,0
+"3, 15",0,0,Ferocious Howl,0
+"16, 32",0,2,Splintergraft,1
+16,0,0,Witchwood Apple,0
+20,0,0,Duskfallen Aviana,0
+3,9,0,Forest Guide,0
+"7, 35","1, 8",0,Poison Seeds,0
+11,5,0,Fandral Staghelm,1
+"11, 15",0,5,Feral Rage,0
+"3, 11",0,0,Mark of Y'Shaarj,0
+"11, 34",0,2,Forbidden Ancient,0
+"11, 35",1,5,Wisps of the Old Gods,0
+"24, 35",0,5,Mire Keeper,1
+11,9,0,Addled Grizzly,0
+0,0,31,Goldshire Footman,0
+0,0,0,Murloc Raider,0
+0,0,4,Stonetusk Boar,0
+6,0,2,Elven Archer,0
+30,0,2,Voodoo Doctor,0
+17,1,0,Grimscale Oracle,0
+0,0,0,River Crocolisk,0
+0,0,31,Frostwolf Grunt,0
+0,0,30,Kobold Geomancer,0
+0,0,0,Bloodfen Raptor,0
+0,0,4,Bluegill Warrior,0
+3,0,2,Novice Engineer,0
+7,0,2,Acidic Swamp Ooze,1
+35,0,2,Murloc Tidehunter,0
+0,0,0,Magma Rager,0
+17,1,0,Raid Leader,0
+0,0,4,Wolfrider,0
+0,0,31,Ironfur Grizzly,0
+0,0,31,Silverback Patriarch,0
+6,0,2,Ironforge Rifleman,0
+35,0,2,Razorfen Hunter,0
+17,0,2,Shattered Sun Cleric,1
+0,0,30,Dalaran Mage,0
+0,0,0,Oasis Snapjaw,0
+0,0,4,Stormwind Knight,1
+3,0,2,Gnomish Inventor,0
+0,0,31,Sen'jin Shieldmasta,1
+0,0,0,Chillwind Yeti,1
+0,0,30,Ogre Magi,0
+6,0,2,Stormpike Commando,0
+0,0,31,Booty Bay Bodyguard,0
+17,0,2,Frostwolf Warlord,0
+30,1,2,Darkscale Healer,0
+17,9,0,Gurubashi Berserker,0
+6,0,2,Nightblade,0
+0,0,30,Archmage,0
+0,0,31,Lord of the Arena,0
+0,0,0,Boulderfist Ogre,1
+0,0,4,Reckless Rocketeer,0
+0,0,0,War Golem,0
+0,0,0,Core Hound,0
+17,1,0,Stormwind Champion,1
+0,0,0,Wisp,0
+6,0,9,Leper Gnome,0
+0,9,4,Southsea Deckhand,0
+0,0,33,Young Dragonhawk,0
+17,0,2,Abusive Sergeant,0
+17,9,0,Lightwarden,0
+17,9,0,Young Priestess,0
+0,0,11,Argent Squire,1
+17,9,0,Angry Chicken,0
+0,0,29,Worgen Infiltrator,1
+17,9,0,Secretkeeper,0
+0,0,31,Shieldbearer,0
+17,9,0,Murloc Tidecaller,0
+"7,17",0,2,Hungry Crab,0
+32,0,2,Bloodsail Corsair,0
+3,"9,5","30,9",Bloodmage Thalnos,0
+1,0,0,Ancient Watcher,0
+31,0,2,Youthful Brewmaster,0
+17,9,0,Mana Addict,0
+17,6,2,Sunfury Protector,1
+32,0,2,Crazed Alchemist,0
+20,"5,9",0,Pint-Sized Summoner,0
+6,6,2,Mad Bomber,1
+3,9,9,Loot Hoarder,1
+26,9,0,Lorewalker Cho,0
+17,6,0,Dire Wolf Alpha,1
+17,9,0,Amani Berserker,1
+3,9,0,Nat Pagle,0
+20,5,0,Mana Wraith,0
+17,9,2,Bloodsail Raider,0
+6,"6,9",0,Knife Juggler,0
+6,"1,9",0,Wild Pyromancer,1
+7,"1,9",0,Doomsayer,0
+10,0,0,Faerie Dragon,1
+20,0,2,Millhouse Manastorm,0
+17,9,0,Master Swordsmith,0
+30,0,2,Earthen Ring Farseer,1
+6,0,2,Injured Blademaster,1
+0,0,"27,2",Ironbeak Owl,0
+"25,26",9,0,Alarm-o-Bot,0
+3,9,0,Acolyte of Pain,0
+26,0,2,King Mukla,0
+0,0,29,Jungle Panther,0
+0,0,11,Scarlet Crusader,1
+0,0,33,Thrallmar Farseer,0
+17,9,0,Questing Adventurer,0
+36,0,2,Tinkmaster Overspark,0
+24,0,2,Arcane Golem,0
+6,9,0,Demolisher,0
+17,1,2,Coldlight Seer,0
+0,0,22,Emperor Cobra,1
+17,9,31,Tauren Warrior,0
+17,9,0,Raging Worgen,1
+17,"1,5",0,Murloc Warleader,0
+35,9,9,Harvest Golem,1
+17,9,2,Blood Knight,1
+35,9,0,Imp Master,1
+17,1,0,Southsea Captain,0
+17,9,0,Flesheating Ghoul,0
+17,0,2,Twilight Drake,1
+17,0,2,Dark Iron Dwarf,1
+0,0,"27,2",Spellbreaker,1
+31,0,2,Ancient Brewmaster,0
+17,0,"31,2",Defender of Argus,1
+0,0,31,Mogu'shan Warden,0
+17,0,2,Ancient Mage,0
+3,9,0,Cult Master,1
+20,9,31,Dread Corsair,0
+0,0,11,Silvermoon Guardian,0
+35,9,0,Violet Teacher,1
+0,0,31,Fen Creeper,1
+35,0,2,Silver Hand Knight,1
+17,9,0,Spiteful Smith,0
+0,0,29,Strangleethorn Tiger,1
+20,5,0,Venture Co. Mercenary,0
+7,0,2,Big Game Hunter,0
+6,"1,9",9,Abomination,0
+"3,6",0,2,Harrison Jones,0
+35,0,2,Leeroy Jenkins,1
+5,0,2,Faceless Manipulator,0
+17,0,2,Captain Greenskin,0
+7,7,2,Stampeding Kodo,1
+7,0,2,The Black Knight,0
+0,0,"31,11",Sunwalker,1
+0,0,33,Windfury Harpy,0
+0,0,"11,4",Argent Commander,1
+3,9,0,Gadgetzan Auctioneer,0
+35,9,9,Cairne Bloodhoof,1
+0,13,2,Frost Elemental,1
+35,9,9,The Beast,0
+30,0,2,Priestess of Elune,0
+35,9,0,Illidan Stormrage,1
+35,9,0,Hogger,1
+0,0,29,Ravenholdt Assassin,0
+6,"1,9",0,Baron Geddon,1
+11,9,0,Gruul,0
+0,5,0,Nozdormu,0
+32,0,2,Alexstrasza,1
+35,0,2,Onyxia,1
+0,0,30,Malygos,1
+26,9,0,Ysera,1
+20,2,0,Sea Giant,1
+"7,9",0,2,Deathwing,1
+20,2,0,Mountain Giant,0
+33,9,9,Weasel Tunneler,0
+30,9,9,Mistress of Mixtures,0
+17,9,0,Small-Time Buccaneer,0
+35,9,0,Patches the Pirate,0
+0,0,"2,10",Grimestreet Informant,1
+6,0,2,Blowgill Sniper,1
+30,9,0,Friendly Bartender,1
+30,0,2,Gadgetzan Socialite,0
+35,0,2,Dirty Rat,0
+0,0,30,Street Trickster,0
+17,9,2,Blubber Baron,0
+6,9,9,Sergeant Sally,0
+6,9,0,Fel Orc Soulfiend,0
+6,9,9,Backstreet Leper,0
+0,0,"10,2",Kabal Courier,1
+0,0,31,Hired Gun,1
+32,0,2,Toxic Sewer Ooze,1
+24,9,0,Auctionmaster Beardo,0
+17,0,2,Grimestreet Smuggler,0
+32,0,2,Kooky Chemist,1
+30,0,2,Hozen Healer,0
+26,0,2,Kabal Chemist,1
+26,9,2,Kazakus,1
+17,0,2,Naga Corsair,0
+17,9,0,Backroom Bouncer,0
+0,0,0,Worgen Greaser,0
+35,0,2,Jade Spirit,0
+3,9,0,"Genzo, the Shark",0
+17,0,2,Tanaris Hogchopper,0
+17,9,0,Daring Reporter,1
+17,9,0,Red Mana Wyrm,0
+35,9,29,"Finja, the Flying Star",0
+20,2,31,Second-Rate Bruiser,1
+32,0,2,Streetwise Investigator,0
+0,0,33,Grook Fu Master,0
+6,9,"9,2",Bomb Squad,1
+35,0,2,Doppelgangster,0
+16,9,0,Burgly Bully,1
+17,9,2,Spiked Hogrider,0
+0,0,"10,2",Lotus Agents,1
+3,9,0,Wind-up Burglebot,0
+3,9,2,Fight Promoter,0
+35,0,2,Big-Time Racketeer,1
+"25,33",0,2,Madam Goya,0
+3,9,2,Wrathion,0
+0,9,2,Leatherclad Hogleader,0
+0,0,31,Ancient of Blossoms,0
+0,0,"27,2",Defias Cleaner,0
+35,9,2,Aya Blackpaw,1
+17,7,2,Don Han'Cho,1
+7,5,0,Mayor Noggenfogger,0
+0,0,16,Swamp Leech,0
+26,9,9,Swamp Dragon Egg,0
+0,0,"25,16",Vicious Scalehide,0
+17,9,9,Lost Spirit,0
+0,0,30,Spellshifter,0
+33,0,2,Baleful Banker,0
+32,2,16,Pumpkin Peasant,0
+0,0,12,Phantom Militia,1
+26,0,2,Ravencaller,1
+26,0,2,Tanglefur Mystic,1
+17,9,0,Hench-Clan Thug,0
+24,0,2,Blackwald Pixie,1
+7,9,"9,2",Voodoo Doll,1
+0,0,12,Walnut Sprite,1
+0,0,0,Nightmare Amalgam,1
+35,0,2,Marsh Drake,0
+17,7,2,Mad Hatter,0
+16,"7,9",0,Witch's Cauldron,1
+0,0,"31,16",Felsoul Inquisitor,0
+32,2,25,Swift Messenger,1
+3,0,2,Sandbinder,0
+3,0,2,Witchwood Piper,1
+17,9,2,Scaleworm,1
+"30,6",0,2,Lifedrinker,0
+17,9,2,Night Prowler,0
+0,0,31,Unpowered Steambot,0
+35,4,0,Dollmaster Dorian,0
+32,0,2,Witchwood Grizzly,1
+11,5,0,Clockwork Automaton,0
+7,0,"26,2",Chief Inspector,1
+30,9,9,Rotten Applebaum,1
+35,0,2,Muck Hunter,1
+7,1,2,Mossy Horror,1
+6,"1,8,9",0,Worgen Abomination,1
+0,0,31,Furious Ettin,1
+0,0,30,Darkmire Moonkin,0
+29,0,2,Azalina Soulthief,0
+17,9,2,Wyrmguard,0
+3,0,2,Countess Ashmore,1
+30,9,9,Deranged Doctor,1
+17,1,0,Cauldron Elemental,0
+32,2,"25,11",Gilnean Royal Guard,1
+35,9,9,Splitting Festeroot,0
+30,9,9,Zombie Chow,1
+17,9,0,Undertaker,0
+35,9,9,Haunted Creeper,1
+17,9,2,Echoing Ooze,0
+25,0,9,Mad Scientist,1
+35,9,9,Nerubian Egg,0
+1,5,0,Nerub'ar Weblord,0
+3,"1,9",9,Unstable Ghoul,1
+17,9,29,Shade of Naxxramas,1
+35,9,9,Deathlord,1
+30,9,0,Stoneskin Gargoyle,0
+3,9,9,Dancing Swords,0
+0,1,"27,2",Wailing Soul,0
+11,5,0,Baron Rivendare,0
+10,5,0,Spectral Knight,1
+35,9,9,Sludge Belcher,1
+35,9,9,Stalagg,0
+35,9,9,Feugen,1
+20,0,2,Loatheb,1
+0,0,22,Maexxna,1
+35,9,0,Kel'Thuzad,1
+37,2,0,Shifter Zerus,0
+3,9,9,Tentacle of N'Zoth,0
+17,9,9,Zealous Initiate,0
+35,0,2,Bilefin Tidehunter,0
+0,0,29,Twisted Worgen,1
+0,0,0,Duskboar,0
+3,9,0,"Nat, the Darkfisher",0
+1,9,0,Silithid Swarmer,0
+0,0,0,Am'gam Rager,0
+17,9,9,Spawn of N'Zoth,0
+0,0,31,Squirming Tentacle,0
+0,0,30,Evolved Kobold,0
+17,9,0,Aberrant Berserker,1
+5,0,2,Faceless Shambler,0
+35,9,9,Infested Tauren,0
+"17,7",0,2,Eater of Secrets,0
+35,9,9,Twilight Summoner,1
+17,0,2,Midnight Drake,0
+20,5,0,Blackwater Pirate,0
+3,9,9,Polluted Hoarder,1
+17,0,2,Cyclopian Horror,0
+32,0,2,Darkspeaker,0
+0,0,"31,11",Psych-o-Tron,1
+30,9,9,Corrupted Healbot,1
+17,9,0,Validated Doomsayer,0
+30,9,2,Cult Apothecary,0
+26,0,2,"Mukla, Tyrant of the Vale",0
+20,2,0,Nerubian Prophet,1
+6,1,2,Corrupted Seer,1
+17,9,0,Scaled Nightmare,0
+3,9,0,Ancient Harbinger,0
+0,0,33,Grotesque Dragonhawk,0
+0,0,31,Bog Creeper,1
+35,9,0,"Hogger, Doom of Elwynn",0
+0,0,0,Eldritch Horror,0
+17,9,0,The Boogeymonster,0
+0,9,0,Blood of The Ancient One,0
+10,5,0,Soggoth the Slitherer,1
+35,9,0,"Y'Shaarj, Rage Unbound",0
+35,9,2,"N'Zoth, the Corruptor",0
+4,7,2,"Yogg-Saron, Hope's End",0
+0,0,0,Faceless Behemoth,0
+25,0,9,"Deathwing, Dragonlord",0
+32,0,0,Hunter's Mark,1
+3,9,0,Starving Buzzard,0
+11,0,"2, 31",Houndmaster,1
+11,"1,5",0,Timber Wolf,0
+11,"1,5",0,Tundra Rhino,0
+6,0,0,Multi-Shot,1
+"3,9",0,0,Tracking,1
+6,0,0,Arcane Shot,0
+6,0,0,Kill Command,1
+35,0,0,Animal Companion,1
+0,9,14,Gladiator's Longbow,1
+11,9,0,Scavenging Hyena,1
+14,7,26,Misdirection,0
+35,0,9,Savannah Highmane,1
+17,9,0,Eaglehorn Bow,1
+6,6,0,Explosive Shot,1
+35,0,0,Unleash the Hounds,1
+0,0,4,King Krush,1
+"3, 7",1,0,Flare,0
+11,0,0,Bestial Wrath,0
+35,0,26,Snake Trap,1
+6,0,26,Snipe,0
+6,"1, 8",26,Explosive Trap,1
+"20, 31",0,26,Freezing Trap,1
+7,7,0,Deadly Shot,1
+11,7,26,Hidden Cache,0
+35,0,2,Alleycat,1
+35,0,9,Rat Pack,1
+6,9,0,Knuckles,1
+11,7,0,Smuggler's Crate,0
+6,0,2,Dispatch Kodo,1
+11,7,9,Shaky Zipgunner,0
+35,9,0,Piranha Launcher,0
+11,7,2,Trogg Beastrager,1
+21,0,2,Emeriss,0
+32,2,29,Duskhaven Hunter,1
+6,20,0,Wing Blast,1
+0,0,"22,25",Vilebrood Skitterer,1
+35,0,26,Rat Trap,0
+11,9,0,Toxmonger,0
+0,0,"12, 25",Hunting Mastiff,1
+11,"1,5",0,Houndmaster Shaw,1
+"11,33",0,0,Dire Frenzy,0
+11,0,2,Carrion Drake,1
+26,7,9,Webspinner,0
+"11, 26",7,9,Infest,1
+"6, 35",0,0,On the Hunt,0
+6,7,9,Fiery Bat,0
+35,0,0,Call of the Wild,1
+35,0,9,Infested Wolf,1
+11,0,2,Forlorn Stalker,0
+38,9,0,Giant Sand Worm,1
+<b>Battlecry:</b> Trigger a friendly minion's <b>Deathrattle</b>.,0,2,Princess Huhuran,1
+0,0,0,Carrion Grub,0
+36,8,0,Polymorph,1
+3,0,0,Arcane Intellect,1
+6,0,13,Frostbolt,1
+6,"1,8",0,Arcane Explosion,1
+0,1,13,Frost Nova,0
+35,0,0,Mirror Image,0
+6,0,0,Fireball,1
+6,"1,8",0,Flamestrike,1
+0,9,13,Water Elemental,1
+6,7,0,Arcane Missiles,1
+6,"1,8",13,Blizzard,1
+"3,6",0,0,Icicle,0
+16,7,0,Tome of Intellect,0
+11,9,0,Ethereal Arcanist,0
+6,6,13,Cone of Cold,1
+6,0,0,Pyroblast,1
+0,0,"8,26",Counterspell,1
+15,0,26,Ice Barrier,0
+35,0,26,Mirror Entity,0
+16,9,0,Archmage Antonidas,1
+7,0,26,Vaporize,0
+20,5,0,Sorcerer's Apprentice,1
+20,0,2,Kirin Tor Mage,1
+17,9,0,Mana Wyrm,0
+35,0,26,Spellbender,1
+0,0,13,Freezing Potion,0
+6,"1, 8",0,Volcanic Potion,1
+20,0,2,Kabal Lackey,0
+36,8,26,Potion of Polymorph,0
+6,"7,8",0,Greater Arcane Missiles,1
+33,0,2,Manic Soulcaster,0
+11,0,2,Cryomancer,1
+20,0,2,Inkmaster Solia,0
+20,0,0,Kabal Crystal Runner,0
+25,0,"2,10",Arcane Keysmith,1
+6,7,0,Cinderstorm,1
+"3,9",0,0,Book of Specters,1
+16,7,2,"Toki, Time-Tinker",1
+11,9,0,Curio Collector,0
+3,0,2,Bonfire Elemental,1
+35,9,0,Vex Crow,0
+16,9,0,Archmage Arugal,1
+7,0,13,Snap Freeze,0
+16,0,26,Duplicate,1
+7,0,0,Shatter,0
+6,"1,8",2,Twilight Flamecaller,1
+0,"7,9",13,Demented Frostcaller,0
+"6,34",8,0,Forbidden Flame,1
+4,7,2,Servant of Yogg-Saron,0
+16,7,0,Cabalist's Tome,1
+6,"1,8",9,Anomalus,1
+35,7,2,Faceless Summoner,1
+11,9,30,Cult Sorcerer,1
+11,0,0,Blessing of Might,0
+30,0,2,Guardian of Kings,0
+30,0,0,Holy Light,0
+0,0,0,Light's Justice,1
+11,0,0,Blessing of Kings,1
+6,"1, 8",0,Consecration,1
+"3, 6",0,0,Hammer of Wrath,0
+30,9,0,Truesilver Champion,1
+32,0,0,Humility,0
+11,0,0,Hand of Protection,0
+35,0,26,Noble Sacrifice,0
+6,0,26,Eye for an Eye,0
+"11,35",0,26,Redemption,0
+"3, 30",0,0,Lay on Hands,1
+21,0,0,Blessed Champion,0
+11,0,2,Argent Protector,1
+11,0,0,Blessing of Wisdom,0
+"3,6",0,0,Holy Wrath,0
+11,9,0,Sword of Justice,1
+32,0,26,Repentance,0
+32,0,2,Aldor Peacekeeper,1
+13,0,"9,11,31",Tirion Fordring,1
+6,7,0,Avenging Wrath,1
+32,1,0,Equality,1
+11,6,"2,31",Grimestreet Protector,1
+11,1,0,Smuggler's Run,0
+11,"1,9",0,Grimestreet Enforcer,1
+11,7,2,Grimscale Chum,0
+11,1,2,Grimestreet Outfitter,0
+3,0,9,Meanstreet Marshal,0
+31,0,26,Getaway Kodo,0
+0,0,"11,16,31",Wickerflame Burnbristle,1
+26,0,0,Small-Time Recruits,0
+11,0,12,Sound the Bells!,1
+20,0,0,Rebuke,0
+0,0,"11,25",Ghostly Charger,1
+11,9,0,Silver Sword,1
+25,0,"2,9",Bellringer Sentry,0
+11,0,2,Cathedral Gargoyle,0
+11,5,0,Paragon of Light,0
+36,1,2,Prince Liam,0
+11,9,11,The Glass Knight,1
+3,0,26,Hidden Wisdom,0
+11,7,26,Avenge,1
+24,0,2,Vilefin Inquisitor,0
+"30,34",0,0,Forbidden Healing,0
+11,7,9,Selfless Hero,0
+11,1,2,Rallying Blade,1
+11,0,0,Divine Strength,0
+30,9,0,"Ragnaros, Lightlord",1
+35,0,0,Stand Against Darkness,1
+11,9,0,Steward of Darkshire,1
+11,0,10,A Light in the Darkness,0
+"20, 24",0,2,Raza the Chained,0
+19,8,0,Potion of Madness,1
+30,0,0,Greater Healing Potion,0
+0,0,"2,10",Drakonid Operative,1
+35,9,0,Mana Geode,1
+11,0,2,Kabal Talonpriest,1
+0,0,"2,27",Kabal Songstealer,1
+11,1,0,Pint-Size Potion,0
+6,"1,8",0,Dragonfire Potion,1
+"6,30","1, 8",0,Holy Nova,1
+19,8,0,Mind Control,1
+32,0,0,Inner Fire,0
+6,0,0,Holy Smite,0
+16,7,0,Mind Vision,0
+"3, 11",0,0,Power Word: Shield,1
+7,8,0,Shadow Word: Pain,1
+3,9,0,Northshire Cleric,1
+21,0,0,Divine Spirit,0
+6,0,0,Mind Blast,0
+19,0,2,Cabal Shadow Priest,1
+19,0,0,Shadow Madness,1
+32,5,0,Lightspawn,1
+16,0,0,Thoughtsteal,1
+30,9,0,Lightwell,0
+25,0,0,Mindgames,0
+11,5,0,Prophet Velen,1
+11,5,0,Auchenai Soulpriest,1
+30,1,0,Circle of Healing,0
+7,8,0,Shadow Word: Death,1
+11,0,2,Temple Enforcer,1
+"6,30",0,0,Holy Fire,0
+24,0,0,Shadowform,0
+3,0,27,Mass Dispel,0
+11,7,9,Dark Cultist,1
+"6, 16",0,0,Holy Water,1
+37,2,0,Chameleos,0
+1,0,0,Quartz Elemental,1
+35,9,0,Nightscale Matriarch,1
+30,1,0,Divine Hymn,0
+35,0,9,Coffin Crasher,1
+35,0,0,Vivid Nightmare,0
+30,0,"2,12",Squashling,1
+4,1,2,Lady in White,0
+11,0,0,Power Word: Tentacles,1
+7,"1, 8",0,Shadow Word: Horror,0
+"34,35",0,0,Forbidden Shaping,1
+11,0,0,Embrace the Shadow,0
+30,0,2,Darkshire Alchemist,0
+35,0,2,Herald Volazj,0
+16,0,9,Shifting Shade,1
+0,0,31,Public Defender,0
+11,"7,9",0,Brass Knuckles,0
+11,1,2,Hobart Grapplehammer,0
+6,"1,8",0,Sleep with the Fishes,0
+11,0,0,Stolen Goods,0
+11,"7,9",0,Grimy Gadgeteer,1
+11,7,2,Grimestreet Pawnbroker,0
+15,9,31,Alley Armorsmith,0
+0,0,10,I Know a Guy,1
+11,0,0,Charge,0
+11,0,0,Rampage,0
+6,0,0,Heroic Strike,0
+0,0,0,Fiery War Axe,1
+7,8,0,Execute,1
+0,0,0,Arcanite Reaper,1
+6,7,0,Cleave,1
+17,"1, 5",0,Warsong Commander,0
+"3,6",0,0,Slam,1
+3,0,0,Battle Rage,1
+13,0,2,Arathi Weaponsmith,1
+6,"1, 8",0,Whirlwind,0
+15,9,0,Armorsmith,1
+7,"1,7,8",0,Brawl,1
+6,0,0,Mortal Strike,1
+"11,13",0,0,Upgrade!,1
+6,0,0,Shield Slam,0
+22,0,0,Gorehowl,1
+12,0,4,Grommash Hellscream,1
+"6,11",0,2,Cruel Taskmaster,1
+17,9,0,Frothing Berserker,1
+"3,15",0,0,Shield Block,0
+"6,11",0,0,Inner Rage,0
+6,"1,8",9,Death's Bite,1
+0,0,25,Rabid Worgen,1
+"1,6",7,0,Blackhowl Gunspire,0
+12,0,25,Redband Wasp,0
+6,0,0,Deadly Arsenal,0
+11,9,25,Darius Crowley,1
+26,0,2,Town Crier,1
+11,7,9,Woodcutter's Axe,1
+6,"1,8",12,Warpath,1
+17,9,0,Festeroot Hulk,0
+11,0,"2,25",Militia Commander,1
+31,0,9,Tentacles for Arms,0
+6,"1,8",2,Ravaging Ghoul,1
+12,0,31,Bloodhoof Brave,1
+13,7,2,Malkorok,1
+16,0,0,Blood Warriors,0
+13,0,2,N'Zoth's First Mate,1
+"6,35",0,0,Blood To Ichor,1
+11,0,2,Bloodsail Cultist,1
+"17,30",0,0,Ancestral Healing,0
+17,1,0,Totemic Might,0
+6,0,13,Frost Shock,0
+17,0,0,Windfury,0
+17,0,0,Rockbiter Weapon,1
+17,6,0,Flametongue Totem,1
+36,0,0,Hex,1
+17,0,"33,2",Windspeaker,0
+17,1,0,Bloodlust,1
+6,0,2,Fire Elemental,1
+6,0,20,Lightning Bolt,1
+0,0,20,Dust Devil,0
+6,0,27,Earth Shock,0
+6,7,20,Forked Lightning,0
+"17,35",0,0,Ancestral Spirit,1
+0,0,20,Stormforged Axe,1
+"3,20",0,0,Far Sight,0
+6,0,20,Lava Burst,1
+35,0,20,Feral Spirit,1
+17,9,9,Unbound Elemental,0
+6,1,20,Lightning Storm,1
+3,9,0,Mana Tide Totem,1
+0,0,"31,20",Earth Elemental,1
+0,0,"33,20",Doomhammer,0
+0,0,"4,11,31,33",Al'Akir the Windlord,1
+0,0,"10,20",Finders Keepers,1
+36,1,0,Devolve,0
+35,0,"20,2",Jade Claws,1
+30,0,2,Jinyu Waterspeaker,1
+35,0,0,Call in the Finishers,0
+36,"5,9",0,Lotus Illusionist,0
+"6,35",0,0,Jade Lightning,1
+33,9,9,White Eyes,0
+35,0,2,Jade Chieftain,0
+6,0,0,Zap!,1
+26,0,"31,2",Witch's Apprentice,0
+0,0,10,Blazing Invocation,1
+"17,26",0,0,Earthen Might,0
+0,0,12,Ghost Light Angler,1
+7,0,2,Totem Cruncher,0
+3,"5,9",0,Bogshaper,0
+"[x]<b>Battlecry:</b> Repeat all other
+ 
+ <b>Battlecries</b> from cards you
+ 
+ played this game <i>(targets
+ 
+ chosen randomly)</i>.",7,2,Shudderwock,0
+"7,35",0,0,Reincarnate,1
+17,0,0,Primal Fusion,0
+36,1,0,Evolve,0
+<b>Battlecry:</b> Unlock your <b>Overloaded</b> Mana Crystals.,0,"20,2",Eternal Sentinel,0
+6,0,20,Stormcrack,1
+0,0,20,Flamewreathed Faceless,1
+36,0,2,Master of Evolution,1
+35,0,9,Hammer of Twilight,1
+30,"5,9",0,Hallazeal the Ascended,0
+20,0,31,Thing from Below,1
+6,0,0,Backstab,1
+17,0,0,Deadly Poison,1
+6,0,0,Sinister Strike,0
+"6,3",0,0,Shiv,0
+31,0,0,Sap,1
+"6,3",1,0,Fan of Knives,1
+7,0,0,Assassinate,1
+0,0,0,Assassin's Blade,1
+31,0,0,Vanish,0
+3,0,0,Sprint,1
+"31,20",0,0,Shadowstep,0
+20,0,0,Preparation,0
+26,0,0,Pilfer,0
+17,9,7,Cold Blood,0
+6,9,7,Eviscerate,1
+6,6,0,Betrayal,1
+35,9,7,Defias Ringleader,1
+0,0,"29,22",Patient Assassin,1
+6,9,"2,7",Perdition's Blade,1
+6,9,7,SI:7 Agent,1
+6,9,7,Headcrack,0
+17,9,7,Edwin VanCleef,1
+"7,6",0,0,Blade Flurry,0
+17,0,"29,2",Master of Disguise,0
+31,9,7,Kidnapper,0
+27,0,0,Counterfeit Coin,0
+"6,35",9,7,Jade Shuriken,1
+35,9,"9,29",Jade Swarmer,1
+31,9,7,Gadgetzan Ferryman,0
+0,0,0,Shadow Rager,1
+26,9,0,"Shaku, the Collector",1
+17,0,2,Shadow Sensei,1
+17,9,0,Lotus Assassin,1
+17,9,2,Luckydo Buccaneer,0
+6,0,12,Cheap Shot,1
+26,0,12,Pick Pocket,1
+26,0,0,Face Collector,1
+26,0,2,Blink Fox,1
+17,9,7,Cutthroat Buccaneer,1
+17,9,12,Mistwraith,0
+32,9,16,Spectral Cutlass,0
+"6,26",0,0,WANTED!,0
+6,9,"25,7",Cursed Castaway,1
+"4,35",7,2,Tess Greymane,0
+31,7,9,Anub'ar Ambusher,0
+17,9,7,Bladed Cultist,0
+0,0,"10,9",Journey Below,1
+26,9,9,Undercity Huckster,1
+6,0,0,Shadow Strike,1
+26,9,"2,9","Xaril, Poisoned Mind",1
+17,9,9,Southsea Squidface,1
+"5,26",0,2,Shadowcaster,0
+"6,5",0,0,Thistle Tea,1
+"7,30",8,0,Sacrificial Pact,0
+0,0,31,Voidwalker,1
+7,8,0,Corruption,1
+"3,6",8,0,Mortal Coil,1
+"9,6",3,0,Soulfire,1
+9,0,2,Succubus,0
+6,0,0,Shadow Bolt,1
+"6,30",0,0,Drain Life,0
+6,0,0,Hellfire,1
+6,1,2,Dread Infernal,1
+17,9,29,Blood Imp,0
+6,0,2,Flame Imp,1
+26,0,0,Call of the Void,0
+"6,17",0,0,Demonfire,0
+24,0,2,Felguard,0
+"7,17",0,2,Void Terror,0
+3,1,0,Sense Demons,0
+6,0,2,Pit Lord,0
+20,5,0,Summoning Portal,0
+"7,6",1,0,Shadowflame,1
+"7,35",9,0,Bane of Doom,1
+"7,30",0,0,Siphon Soul,1
+7,1,0,Twisting Nether,1
+"7,29",0,2,Lord Jaraxxus,1
+6,9,0,Unlicensed Apothecary,1
+17,0,0,Bloodfury Potion,0
+17,9,2,Crystalweaver,1
+"[x]<b>2:</b> The next Murloc
+ 
+ you play this turn costs
+ 
+ ?Health instead of Mana.",0,2,Seadevil Stinger,0
+7,0,0,Blastcrystal Potion,1
+26,5,0,Kabal Trafficker,1
+6,1,0,Felfire Potion,1
+6,1,2,Abyssal Enforcer,1
+35,1,2,Krul the Unshackled,0
+17,9,9,Witchwood Imp,0
+"6,26",0,0,Dark Possession,0
+32,1,12,Curse of Weakness,0
+35,9,2,Duskbat,0
+"7,17",0,2,Ratcatcher,0
+6,5,0,Blood Witch,0
+35,0,0,Fiendish Circle,0
+17,9,2,Deathweb Spider,0
+11,5,0,Glinda Crowskin,1
+6,"1,9",2,Lord Godfrey,1
+25,9,9,Voidcaller,0
+35,0,0,Forbidden Ritual,1
+35,9,9,Possessed Villager,0
+"9,3",9,2,Darkshire Librarian,0
+"29,20",0,0,Renounce Darkness,0
+17,9,0,Darkshire Councilman,1
+6,"1,7",0,Spreading Madness,0
+6,0,2,Cho'gall,1
+"7,3",1,0,DOOM!,1
