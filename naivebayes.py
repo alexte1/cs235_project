@@ -68,22 +68,35 @@ def probabilityForBad(unseparateddata, traindata, card):
 def classify(unseparated, traindata, testdata):
 	correct = 0
 	ratingval = 0
+	#fullresults = []
+	resultfile=open('results.csv', 'wb')
+	csvwriter = csv.writer(resultfile)
 	for x in testdata:
+		result = []
+		result.append(' '.join(x[len(x)-1]))
 		print(x[len(x)-1])
 		good = probabilityForGood(unseparated, traindata, x)
 		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
 			print("good")
+			result.append("good")
 			print(x[3][0])
+			result.append(x[3][0])
 			ratingval = 1
 			if (int(x[3][0])==ratingval):
 				correct+=1
 		if bad > good:
 			print("bad")
+			result.append("bad")
 			print(x[3][0])
+			result.append(x[3][0])
 			ratingval = 0
 			if (int(x[3][0])==ratingval):
 				correct+=1
+		csvwriter.writerow(result)
+		#fullresults.append(result)
+	resultfile.close()
+	#print(fullresults)
 	print(float(correct)/135)
 	return
 
