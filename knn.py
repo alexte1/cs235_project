@@ -4,8 +4,8 @@ import copy
 import matplotlib.pyplot as plt
 
 def intro():
-	testFile = "AllTestDataAlex.csv"
-	trainFile = "AllTrainDataAlex.csv"
+	testFile = "./Data/AllTestDataAlex.csv"
+	trainFile = "./Data/AllTrainDataAlex.csv"
 	return (testFile, trainFile)
 
 def parseFile(testFile, trainFile):
