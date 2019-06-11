@@ -42,6 +42,7 @@ def laplacesmoothing(traindata):
 				count[x]+=1
 	return count
  
+ #probability of a card being good
 def probabilityForGood(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)-2):
@@ -53,7 +54,7 @@ def probabilityForGood(unseparateddata, traindata, card):
 	probability*= float(len(traindata['1']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
-
+#probability of a card being bad
 def probabilityForBad(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)-2):
@@ -65,7 +66,7 @@ def probabilityForBad(unseparateddata, traindata, card):
 	probability*= float(len(traindata['0']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
-
+#compare probabilities for all cards, output results into a csv file and also plot predicted results and the actual classification
 def classify(unseparated, traindata, testdata):
 	correct = 0
 	ratingval = 0
