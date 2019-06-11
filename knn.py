@@ -4,11 +4,6 @@ import copy
 import matplotlib.pyplot as plt
 
 def intro():
-	# testFile = input('Type in the name of the file to test - ')
-	# trainFile = input('Type in the name of the file to train - ')
-	# testFile = "UpdatedTestDataMage.csv"
-	# trainFile = "updatedTrainDataMage.csv"
-	# trainFile = "DruidDataAlex.csv"
 	testFile = "AllTestDataAlex.csv"
 	trainFile = "AllTrainDataAlex.csv"
 	return (testFile, trainFile)
@@ -283,89 +278,6 @@ def forwardPropagation(testingSet, trainingSet, trainingLabel, testingLabel):
 	# for i in range(index2 + 1):
 	# 	print "Feature:", bestFeatureList[i] + 1
 
-def backPropagation(testingSet, trainingSet, trainingLabel, testingLabel):
-
-	#stores all the percentages for forward propagation
-	bestFeaturePercentList = []
-
-	#both of these lists have all the single columns.
-	testOneColumn = getTestAttributes(testingSet)
-	trainOneColumn = getTrainAttributes(trainingSet)
-
-	#used to calculate the highest percentage
-
-	percentList = []
-	correspondingFeatureList = []
-
-	copyTest = copy.deepcopy(testingSet)
-	copyTrain = copy.deepcopy(trainingSet)
-
-	testTheseFeatures = [0,1,2,3,4,5,6]
-	ab = 0
-	xyz = 0
-	efIndex = 0
-	while len(testTheseFeatures) > 0:
-
-		run = 0
-		tmp2 = []
-		featureList = []
-		bestFeaturePercent = 0
-		excludeFeature = min(testTheseFeatures) - 1
-		percentList = []
-		correspondingFeatureList = []
-
-		while run != len(testTheseFeatures):
-
-			tmptmp = []
-			knnTrainingSet = []
-			knnTestingSet = []
-			excludeFeature += 1
-
-			while excludeFeature not in testTheseFeatures:
-				excludeFeature += 1
-
-			for i in range(len(copyTest)):
-				tmp = []
-				for j in range(len(testTheseFeatures)):
-					if testTheseFeatures[j] != excludeFeature:
-						tmp.append(copyTest[i][testTheseFeatures[j]])
-				knnTestingSet.append(tmp)
-
-			for k in range(len(copyTrain)):
-				tmp = []
-				for l in range(len(testTheseFeatures)):
-					if testTheseFeatures[l] != excludeFeature:
-						tmp.append(copyTrain[k][testTheseFeatures[l]])
-				knnTrainingSet.append(tmp)
-
-			result = knn_classifier(knnTrainingSet, knnTestingSet, trainingLabel, testingLabel)
-			percent = checkCalculation(result, testingLabel)
-
-			for n in range(len(testTheseFeatures)):
-				if testTheseFeatures[n] != excludeFeature and excludeFeature in testTheseFeatures:
-					tmptmp.append(testTheseFeatures[n])
-			correspondingFeatureList.append(tmptmp)
-
-			percentList.append(percent)
-
-			if percent > bestFeaturePercent:
-				featureList = []
-				bestFeaturePercent = percent
-				for m in range(len(testTheseFeatures)):
-					if testTheseFeatures[m] != excludeFeature:
-						featureList.append(testTheseFeatures[m])
-			run += 1
-
-		index = percentList.index(bestFeaturePercent)
-		testTheseFeatures = copy.deepcopy(correspondingFeatureList[index])
-		
-		print("Using feature(s) {", bestFeatureList, "} accuracy is", bestFeaturePercent)
-		print("Feature set {", feature,"} was best, accuracy is", bestFeaturePercent, "%\n")
-
-	print(percentList)
-	print(correspondingFeatureList)
-	return
-
 def getTestAttributes(testingSet):
 
 	rtnList = []
@@ -423,7 +335,6 @@ def main():
 	percentCorrect = checkCalculation(resultTuple, testingLabel)
 
 	forwardPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
-	# backPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
 
 	# print(resultTuple)
 	print(percentCorrect)
