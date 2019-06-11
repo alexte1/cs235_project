@@ -1,5 +1,6 @@
 import csv
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 #separate each feature as a list of characters
 def loadData(file):
@@ -68,10 +69,11 @@ def probabilityForBad(unseparateddata, traindata, card):
 def classify(unseparated, traindata, testdata):
 	correct = 0
 	ratingval = 0
-	#fullresults = []
-	resultfile=open('results.csv', 'wb')
+	fullresults = []
+	resultfile=open('results.csv', 'w')
 	csvwriter = csv.writer(resultfile)
 	for x in testdata:
+		resultforgraph = []
 		result = []
 		result.append(' '.join(x[len(x)-1]))
 		print(x[len(x)-1])
@@ -80,8 +82,10 @@ def classify(unseparated, traindata, testdata):
 		if good > bad:
 			print("good")
 			result.append("good")
+			resultforgraph.append(1)
 			print(x[3][0])
-			result.append(x[3][0])
+			result.append(int(x[3][0]))
+			resultforgraph.append(int(x[3][0]))
 			ratingval = 1
 			if (int(x[3][0])==ratingval):
 				correct+=1
@@ -89,14 +93,28 @@ def classify(unseparated, traindata, testdata):
 			print("bad")
 			result.append("bad")
 			print(x[3][0])
-			result.append(x[3][0])
+			resultforgraph.append(0)
+			result.append(int(x[3][0]))
+			resultforgraph.append(int(x[3][0]))
 			ratingval = 0
 			if (int(x[3][0])==ratingval):
 				correct+=1
 		csvwriter.writerow(result)
-		#fullresults.append(result)
+		fullresults.append(resultforgraph)
 	resultfile.close()
-	#print(fullresults)
+	grapharray = np.array(fullresults)
+	xval= np.arange(135)
+	f1 = plt.figure(1)
+	plt.plot(xval, grapharray[:,0], 'bo', markersize=2)
+	plt.title('Predicted Classification')
+	plt.ylabel('classification: 1=good, 0=bad')
+	plt.xlabel('card')
+	f2 = plt.figure(2)
+	plt.plot(xval, grapharray[:,1], 'ro', markersize=2)
+	plt.title('Actual Classification')
+	plt.ylabel('classification: 1=good, 0=bad')
+	plt.xlabel('card')
+	plt.show()
 	print(float(correct)/135)
 	return
 
