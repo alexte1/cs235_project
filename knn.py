@@ -1,32 +1,54 @@
-def parseFile(fileToOpen):
-# def parseFile():
+import random
+import math
+import copy
+import matplotlib.pyplot as plt
+
+def intro():
+	# testFile = input('Type in the name of the file to test - ')
+	# trainFile = input('Type in the name of the file to train - ')
+	# testFile = "UpdatedTestDataMage.csv"
+	# trainFile = "updatedTrainDataMage.csv"
+	# trainFile = "DruidDataAlex.csv"
+	testFile = "AllTestDataAlex.csv"
+	trainFile = "AllTrainDataAlex.csv"
+	return (testFile, trainFile)
+
+def parseFile(testFile, trainFile):
 	try:
-		# file = open("CS170_SMALLtestdata__30.txt", "r")
-		# file = open("CS170_SMALLtestdata__30.txt", "r")
-		file = open(fileToOpen, "r")
+		fileTest = open(testFile, "r")
+		fileTrain = open(trainFile, "r")
 	except IOError:
-		print "Open failed"
+		print("Open failed")
 		return
 
-	data = file.readlines()
+	dataTest = fileTest.readlines()
+	dataTrain = fileTrain.readlines()
 
-	dataList = []
+	dataListTest = []
+	dataListTrain = []
 
-	for i in data:
-		parsed = i.split(" ")
+	for i in dataTest:
+		i = i.strip()	
+		parsed = i.split(",")
 		parsed = [float(j) for j in parsed]
-		dataList.append(parsed)
+		dataListTest.append(parsed)
 
-	file.close()
+	for i in dataTrain:
+		i = i.strip()	
+		parsed = i.split(",")
+		parsed = [float(j) for j in parsed]
+		dataListTrain.append(parsed)
 
-	return dataList
+	fileTest.close()
+	fileTrain.close()
 
-#splitting the data from its feature. It will correspond accordingly. i.e
-# 1.0000000e+00 8.3624403e-01 1.4527562e+00 1.4174702e+00 -4.0407611e-01 7.3276154e-02 -1.7618845e+00 -3.7207882e-01 1.5982776e+00 7.9518550e-01 3.7655497e-01
-# will be split into:
-# featureSplit = 1.0
-# dataSplit = 8.3624403e-01 1.4527562e+00 1.4174702e+00 -4.0407611e-01 7.3276154e-02 -1.7618845e+00 -3.7207882e-01 1.5982776e+00 7.9518550e-01 3.7655497e-01
-# but there will be more because there is more than 1 object.
+	# count = 1
+	# for i in dataListTrain:
+	# 	print("{}: {}".format(count, i))
+	# 	count += 1
+
+	return (dataListTest, dataListTrain)
+
 def splitFeatureData(dataList):
 	featureSplit = []
 	dataSplit = []
@@ -36,8 +58,14 @@ def splitFeatureData(dataList):
 	# random.shuffle(dataList)
 
 	for i in dataList:
-		featureSplit.append(i[0])
-		dataSplit.append(i[1:])
+		featureSplit.append(i[-1])
+		dataSplit.append(i[:-1])
+
+	# count = 1
+
+	# for i in featureSplit:
+	# 	print("{}- {}".format(count,i))
+	# 	count+=1
 
 	return(featureSplit, dataSplit)
 
@@ -96,25 +124,247 @@ def knn_classifier(trainingSet, testingSet, trainingLabel, testingLabel):
 		#need it to count what the current point's nearest neighbor is
 		class1 = 0
 		class2 = 0
+		classGood = 0
+		classBad = 0
 
-		# print tmpList
+		# count = 1
+		# for i in distanceList:
+		# 	print("{}: {}".format(count, i))
+		# 	count +=1
 
-		if trainingLabel[distanceList[0][1]] == 1.0:
-			class1 += 1
-		else:
-			class2 += 1
+		# if trainingLabel[distanceList[0][1]] == 1.0:
+		# 	class1 += 1
+		# else:
+		# 	class2 += 1
+		#chooisng k = 10
+		for z in range(10):
+			if trainingLabel[distanceList[z][1]] == 0.0:
+				classBad += 1
+				# print("Giving badd")
+			else:
+				classGood += 1
+				# print("Giving Good")
 
 		#appending the class label (either 1 or 2), then what point we are testing (i)
-		if class1 > class2:
-			kdiffClasses.append((1.0, i))
+		# if class1 > class2:
+		# 	kdiffClasses.append((1.0, i))
+		# else:
+		# 	kdiffClasses.append((2.0, i))
+
+		if classBad > classGood:
+			kdiffClasses.append((0.0, i))
+			# print("Labeled as a 0 (bad)")
 		else:
-			kdiffClasses.append((2.0, i))
+			kdiffClasses.append((1.0, i))
+			# print("Labeled as a 1 (good)")
 
 		#this breaks when we have checked all of the points
 		if len(kdiffClasses) == len(testingLabel):
 			break
 
 	return kdiffClasses
+
+def forwardPropagation(testingSet, trainingSet, trainingLabel, testingLabel):
+
+	#stores all the percentages for forward propagation
+	bestFeaturePercentList = []
+	featureList = []
+	flp = []
+	#both of these lists have all the single columns.
+	testOneColumn = getTestAttributes(testingSet)
+	trainOneColumn = getTrainAttributes(trainingSet)
+
+	#for visualizing the data
+	number_of_features = []
+	graph_percentage = []
+
+	#used to calculate the highest percentage
+	bestFeaturePercent = 0
+
+	for i in range(len(testOneColumn)):
+		result = knn_classifier(trainOneColumn[i], testOneColumn[i], trainingLabel, testingLabel)
+		percent = checkCalculation(result, testingLabel)
+		featureList.append(i)
+		flp.append(percent)
+		if percent > bestFeaturePercent:
+			bestFeaturePercent = percent
+			feature = i
+
+	#bestFeatureList will hold all the best features in order when using forward propagation.
+	bestFeatureList = []
+	bestFeatureList.append(feature)
+
+	# print featureList
+	# print flp
+
+	for i in range(len(bestFeatureList)):
+		print("Using feature(s) {", bestFeatureList[i], "} accuracy is", flp[i])
+	print("Feature set {", feature,"} was best, accuracy is", bestFeaturePercent, "%\n")
+
+
+	#Defined at the beginning of function.
+	bestFeaturePercentList.append(bestFeaturePercent)
+
+	#used so we can test each combination of pairs without editing the master (bestFeatureList) list
+	tmpBestFeatures = []
+	featureList = []
+	neededToPrintList = []
+ 	#keeps looping until the TmpBestFeatures (defined above) has reached all features and tried all combinations
+	while len(tmpBestFeatures) != len(testOneColumn) - 1:
+		#need to reset the percent after trying each iteration
+		bestFeaturePercent = 0
+		#defined above. tl;dr need a copy so we dont edit the master copy.
+		tmpBestFeatures = copy.deepcopy(bestFeatureList)
+
+		neededToPrintList.append(feature)
+		needToPrintPercent = []
+
+		for index in range(len(testOneColumn)):
+			if index not in bestFeatureList:
+
+				tmpBestFeatures.append(index)
+				knnTestingSet = []
+				knnTrainingSet = []
+
+				for j in range(len(testingSet)):
+					tmp = []
+					for i in range(len(tmpBestFeatures)):
+						tmp.append(testingSet[j][tmpBestFeatures[i]])
+					knnTestingSet.append(tmp)
+
+				for j in range(len(trainingSet)):
+					tmp = []
+					for i in range(len(tmpBestFeatures)):
+						tmp.append(trainingSet[j][tmpBestFeatures[i]])
+					knnTrainingSet.append(tmp)
+
+				result = knn_classifier(knnTrainingSet, knnTestingSet, trainingLabel, testingLabel)
+				percent = checkCalculation(result, testingLabel)
+
+				featureList.append(index)
+
+				neededToPrintList.append(index)
+				needToPrintPercent.append(percent)
+
+				if percent > bestFeaturePercent:
+					bestFeaturePercent = percent
+					feature = index
+				del tmpBestFeatures[-1]
+
+		bestFeatureList.append(feature)
+		
+		print("Using feature(s) {", bestFeatureList, "} accuracy is", bestFeaturePercent)
+		print("Feature set {", feature,"} was best, accuracy is", bestFeaturePercent, "%\n")
+		graph_percentage.append(bestFeaturePercent)
+		number_of_features.append(len(bestFeatureList))
+
+		# bestFeatureList.append(feature)
+		# print bestFeatureList
+
+		# return
+
+		bestFeaturePercentList.append(bestFeaturePercent)
+
+	# print bestFeatureList
+	# print bestFeaturePercentList
+	plt.xlabel("Number of Features")
+	plt.ylabel("Accuracy in Percentage")
+	plt.title("Number of Features vs Accuracy")
+	plt.plot(number_of_features, graph_percentage)
+	plt.show()
+
+	highest = -1
+
+	# for i in range(len(bestFeaturePercentList)):
+	# 	if bestFeaturePercentList[i] > highest:
+	# 		highest = bestFeaturePercentList[i]
+	# 		index2 = i
+
+	# for i in range(index2 + 1):
+	# 	print "Feature:", bestFeatureList[i] + 1
+
+def backPropagation(testingSet, trainingSet, trainingLabel, testingLabel):
+
+	#stores all the percentages for forward propagation
+	bestFeaturePercentList = []
+
+	#both of these lists have all the single columns.
+	testOneColumn = getTestAttributes(testingSet)
+	trainOneColumn = getTrainAttributes(trainingSet)
+
+	#used to calculate the highest percentage
+
+	percentList = []
+	correspondingFeatureList = []
+
+	copyTest = copy.deepcopy(testingSet)
+	copyTrain = copy.deepcopy(trainingSet)
+
+	testTheseFeatures = [0,1,2,3,4,5,6]
+	ab = 0
+	xyz = 0
+	efIndex = 0
+	while len(testTheseFeatures) > 0:
+
+		run = 0
+		tmp2 = []
+		featureList = []
+		bestFeaturePercent = 0
+		excludeFeature = min(testTheseFeatures) - 1
+		percentList = []
+		correspondingFeatureList = []
+
+		while run != len(testTheseFeatures):
+
+			tmptmp = []
+			knnTrainingSet = []
+			knnTestingSet = []
+			excludeFeature += 1
+
+			while excludeFeature not in testTheseFeatures:
+				excludeFeature += 1
+
+			for i in range(len(copyTest)):
+				tmp = []
+				for j in range(len(testTheseFeatures)):
+					if testTheseFeatures[j] != excludeFeature:
+						tmp.append(copyTest[i][testTheseFeatures[j]])
+				knnTestingSet.append(tmp)
+
+			for k in range(len(copyTrain)):
+				tmp = []
+				for l in range(len(testTheseFeatures)):
+					if testTheseFeatures[l] != excludeFeature:
+						tmp.append(copyTrain[k][testTheseFeatures[l]])
+				knnTrainingSet.append(tmp)
+
+			result = knn_classifier(knnTrainingSet, knnTestingSet, trainingLabel, testingLabel)
+			percent = checkCalculation(result, testingLabel)
+
+			for n in range(len(testTheseFeatures)):
+				if testTheseFeatures[n] != excludeFeature and excludeFeature in testTheseFeatures:
+					tmptmp.append(testTheseFeatures[n])
+			correspondingFeatureList.append(tmptmp)
+
+			percentList.append(percent)
+
+			if percent > bestFeaturePercent:
+				featureList = []
+				bestFeaturePercent = percent
+				for m in range(len(testTheseFeatures)):
+					if testTheseFeatures[m] != excludeFeature:
+						featureList.append(testTheseFeatures[m])
+			run += 1
+
+		index = percentList.index(bestFeaturePercent)
+		testTheseFeatures = copy.deepcopy(correspondingFeatureList[index])
+		
+		print("Using feature(s) {", bestFeatureList, "} accuracy is", bestFeaturePercent)
+		print("Feature set {", feature,"} was best, accuracy is", bestFeaturePercent, "%\n")
+
+	print(percentList)
+	print(correspondingFeatureList)
+	return
 
 def getTestAttributes(testingSet):
 
@@ -156,31 +406,28 @@ def checkCalculation(resultTuple, testingLabel):
 
 def main():
 	#returns the name of the file to open.
-	fileToOpen, algorithmNum = intro()
+	testFile, trainFile = intro()
 	# algorithmNum = 1
 
-	dataList = parseFile(fileToOpen)
+	dataListTest, dataListTrain = parseFile(testFile, trainFile)
 	# dataList = parseFile()
 
-	classLabels, dataSplit = splitFeatureData(dataList)
+	train_data_label, train_data_no_label = splitFeatureData(dataListTrain)
 
-	trainingSet, testingSet = eightyTwentySplit(dataSplit)
-	trainingLabel, testingLabel = eightyTwentySplit(classLabels)
+	trainingSet, testingSet = eightyTwentySplit(train_data_no_label)
+	trainingLabel, testingLabel = eightyTwentySplit(train_data_label)
 
 	##################################################################################
 	#running it will all the features and not just 1
 	resultTuple = knn_classifier(trainingSet, testingSet, trainingLabel, testingLabel)
 	percentCorrect = checkCalculation(resultTuple, testingLabel)
+
+	forwardPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
+	# backPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
+
+	# print(resultTuple)
+	print(percentCorrect)
 	##################################################################################
-	if algorithmNum == 1:
-		forwardPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
-	elif algorithmNum == 2:
-		backPropagation(testingSet, trainingSet, trainingLabel, testingLabel)
-	elif algorithmNum == 3:
-		print "Alex's speical Algorithm (Alpha Beta Pruning)"
-	else:
-		print "Did not recgonize input"
 
 if __name__ == "__main__":
 	main()
-	
