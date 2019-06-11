@@ -1,5 +1,6 @@
 import csv
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 #separate each feature as a list of characters
 def loadData(file):
@@ -41,6 +42,7 @@ def laplacesmoothing(traindata):
 				count[x]+=1
 	return count
  
+ #probability of a card being good
 def probabilityForGood(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)-2):
@@ -52,7 +54,7 @@ def probabilityForGood(unseparateddata, traindata, card):
 	probability*= float(len(traindata['1']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
-
+#probability of a card being bad
 def probabilityForBad(unseparateddata, traindata, card):
 	probability = 1
 	for x in range(len(card)-2):
@@ -64,26 +66,56 @@ def probabilityForBad(unseparateddata, traindata, card):
 	probability*= float(len(traindata['0']))/(len(traindata['1'])+len(traindata['0']))
 	return probability
 
-
+#compare probabilities for all cards, output results into a csv file and also plot predicted results and the actual classification
 def classify(unseparated, traindata, testdata):
 	correct = 0
 	ratingval = 0
+	fullresults = []
+	resultfile=open('results.csv', 'w')
+	csvwriter = csv.writer(resultfile)
 	for x in testdata:
+		resultforgraph = []
+		result = []
+		result.append(' '.join(x[len(x)-1]))
 		print(x[len(x)-1])
 		good = probabilityForGood(unseparated, traindata, x)
 		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
 			print("good")
+			result.append("good")
+			resultforgraph.append(1)
 			print(x[3][0])
+			result.append(int(x[3][0]))
+			resultforgraph.append(int(x[3][0]))
 			ratingval = 1
 			if (int(x[3][0])==ratingval):
 				correct+=1
 		if bad > good:
 			print("bad")
+			result.append("bad")
 			print(x[3][0])
+			resultforgraph.append(0)
+			result.append(int(x[3][0]))
+			resultforgraph.append(int(x[3][0]))
 			ratingval = 0
 			if (int(x[3][0])==ratingval):
 				correct+=1
+		csvwriter.writerow(result)
+		fullresults.append(resultforgraph)
+	resultfile.close()
+	grapharray = np.array(fullresults)
+	xval= np.arange(135)
+	f1 = plt.figure(1)
+	plt.plot(xval, grapharray[:,0], 'bo', markersize=2)
+	plt.title('Predicted Classification')
+	plt.ylabel('classification: 1=good, 0=bad')
+	plt.xlabel('card')
+	f2 = plt.figure(2)
+	plt.plot(xval, grapharray[:,1], 'ro', markersize=2)
+	plt.title('Actual Classification')
+	plt.ylabel('classification: 1=good, 0=bad')
+	plt.xlabel('card')
+	plt.show()
 	print(float(correct)/135)
 	return
 
