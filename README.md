@@ -8,7 +8,8 @@ Our three classifiers (KNN, Naive Bayes, and Decision Tree) all aim to classify 
 ### RUN
 How to run:
 ```
-make clean
 make
+or
+make run
 ```
-This will run all of our classifiers
+This will run all of our classifiers.
