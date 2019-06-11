@@ -10,9 +10,9 @@ def loadData(file):
 		data[x] = [y.split() for y in data[x]]
 	return data
 
-traindatafile = 'TrainData - All - nomanacost.csv'
+traindatafile = 'Data/TrainData - All - nomanacost.csv'
 traindataset = loadData(traindatafile)
-testdatafile = 'TestData - All - nomanacost.csv'
+testdatafile = 'Data/TestData - All - nomanacost.csv'
 testdataset = loadData(testdatafile)
 
 
@@ -71,29 +71,29 @@ def classify(unseparated, traindata, testdata):
 	correct = 0
 	ratingval = 0
 	fullresults = []
-	resultfile=open('results.csv', 'w')
+	resultfile=open('Data/results.csv', 'w')
 	csvwriter = csv.writer(resultfile)
 	for x in testdata:
 		resultforgraph = []
 		result = []
 		result.append(' '.join(x[len(x)-1]))
-		print(x[len(x)-1])
+		#print(x[len(x)-1])
 		good = probabilityForGood(unseparated, traindata, x)
 		bad = probabilityForBad(unseparated, traindata, x)
 		if good > bad:
-			print("good")
-			result.append("good")
+			#print("good")
+			result.append("predicted good")
 			resultforgraph.append(1)
-			print(x[3][0])
+			#print(x[3][0])
 			result.append(int(x[3][0]))
 			resultforgraph.append(int(x[3][0]))
 			ratingval = 1
 			if (int(x[3][0])==ratingval):
 				correct+=1
 		if bad > good:
-			print("bad")
-			result.append("bad")
-			print(x[3][0])
+			#print("bad")
+			result.append("predicted bad")
+			#print(x[3][0])
 			resultforgraph.append(0)
 			result.append(int(x[3][0]))
 			resultforgraph.append(int(x[3][0]))
@@ -103,6 +103,7 @@ def classify(unseparated, traindata, testdata):
 		csvwriter.writerow(result)
 		fullresults.append(resultforgraph)
 	resultfile.close()
+	print(float(correct)/135)
 	grapharray = np.array(fullresults)
 	xval= np.arange(135)
 	f1 = plt.figure(1)
@@ -116,7 +117,6 @@ def classify(unseparated, traindata, testdata):
 	plt.ylabel('classification: 1=good, 0=bad')
 	plt.xlabel('card')
 	plt.show()
-	print(float(correct)/135)
 	return
 
 classify(traindataset, separated, testdataset)
