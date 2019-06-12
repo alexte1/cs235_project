@@ -6,10 +6,13 @@ We are focusing specifically on Heartstone's Arena game mode, a buy-in type of t
 Our three classifiers (KNN, Naive Bayes, and Decision Tree) all aim to classify how well a card does given its statistics that can be measures. Namely, Mana cost, Mechanic Text, Card Type, Mechanic Type, Bold Words, Heath, and Attack. Given these seven features, we try and determine the merit of the card.
 
 ### RUN
+
 How to run:
+
 ```
 make
 or
 make run
 ```
-This will run all of our classifiers.
+
+This will run all of our classifiers in this order: KNN, Naive Bayes, Decision Tree. A graph will show up for each classifier, so in order to continue execution, just close the graph.
